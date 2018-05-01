@@ -3,8 +3,22 @@ $(document).ready(function() {
 
   $('#lineUp').on('click',function(event){
     let height = $("body").height()/2;
-    let left = $("body").width()/2;
+
+    var leftInc = $("body").width()/window.dancers.length;
+
+    let left = 0;
     window.dancers.forEach(function(dancer){
+      left += leftInc;
+      dancer.setPosition(height,left);
+
+    });
+  });
+
+  $('#randomize').on('click',function(event){
+
+    window.dancers.forEach(function(dancer){
+      let height = $("body").height() * Math.random();
+      var left = $("body").width() * Math.random();
       dancer.setPosition(height,left);
     });
   });
