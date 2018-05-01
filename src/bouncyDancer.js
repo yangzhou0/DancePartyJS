@@ -3,6 +3,8 @@ var makeBouncyDancer = function(top, left, timeBetweenSteps) {
   this.pause = timeBetweenSteps;
   this.flag = 0;
   makeDancer.call(this, top, left, timeBetweenSteps);
+  var $img = $('<img src=\"assets/GIFs/dancingTree.gif\"></img>');
+  this.$node.append($img);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function

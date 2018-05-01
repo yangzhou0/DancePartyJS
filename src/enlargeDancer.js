@@ -3,7 +3,8 @@ var makeEnlargeDancer = function(top, left, timeBetweenSteps) {
   this.pause = timeBetweenSteps;
   this.flag = 0;
   makeDancer.call(this, top, left, timeBetweenSteps);
-
+  var $img = $('<img src=\"assets/GIFs/hulaDancer.gif\"></img>');
+  this.$node.append($img);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
@@ -24,12 +25,12 @@ makeEnlargeDancer.prototype.step = function() {
   if(this.flag===0){
 
     // this.$node.animate({border: '40px'},this.pause);
-    this.$node.animate({'borderWidth': '40px'});
+    this.$node.animate({'height': '250px'});
     this.flag++;
   }
   else{
     // this.$node.animate({border: '20px'},this.pause);
-    this.$node.animate({'borderWidth': '20px'});
+    this.$node.animate({'height': '150px'});
     this.flag--;
   }
 };

@@ -12,7 +12,8 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, #lineUp, #randomize, #interact{
+
+.title, .addDancerButton, #lineUp, #randomize, #moneyRain{
   padding:5px 12px;
   float:right;
 }
@@ -24,11 +25,28 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:20px solid red;
-  border-radius:100%;
+  height: 150px;
+  width: auto;
   position:absolute;
+}
+
+img {
+  height: 100%;
+  width: auto;
 }
 
 .center{
   display:center;
 }
+
+/*.hello {
+  animation-name: moveIn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveIn {
+  0% {transform: scale(1);},
+  50% {transform:scale(5);},
+  100% {transform: scale(1);}
+}*/

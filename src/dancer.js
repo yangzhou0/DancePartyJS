@@ -16,9 +16,10 @@ makeDancer.prototype.step = function(timeBetweenSteps) {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
   var dancer = this;
-  setTimeout(function() {
+  var timeout = setTimeout(function() {
     dancer.step();
   }, timeBetweenSteps);
+  dancer.$node.data('timeout', timeout);
 };
 
 
@@ -37,3 +38,12 @@ makeDancer.prototype.setPosition = function(top, left) {
   dancer.$node.data('instance', dancer);
   // dancer.$node.data('left', left);
 };
+
+makeDancer.prototype.reSize = function(){
+  var dancer = this;
+  var styleSettings = {
+    height: '150px',
+    width: 'auto'
+  };
+  dancer.$node.css(styleSettings);
+}

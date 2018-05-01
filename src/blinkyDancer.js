@@ -2,6 +2,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   this.repeat = makeDancer.prototype.step;
   this.pause = timeBetweenSteps;
   makeDancer.call(this, top, left, timeBetweenSteps);
+  var $img = $('<img src=\"assets/GIFs/stitch.gif\"></img>');
+  this.$node.append($img);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
