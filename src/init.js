@@ -1,6 +1,14 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  $('#lineUp').on('click',function(event){
+    let height = $("body").height()/2;
+    let left = $("body").width()/2;
+    window.dancers.forEach(function(dancer){
+      dancer.setPosition(height,left);
+    });
+  });
+
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -30,4 +38,7 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
+
+
+
 });
