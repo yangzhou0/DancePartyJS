@@ -27,6 +27,7 @@ makeDancer.prototype.setPosition = function(top, left) {
   // where it belongs on the page. See http://api.jquery.com/css/
   //
   this.top = top;
+  this.left = left;
   var dancer = this;
   var styleSettings = {
     top: top,
