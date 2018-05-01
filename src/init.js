@@ -29,31 +29,29 @@ $(document).ready(function() {
   });
 
 
-  // $('body').on('mouseover','.dancer', function(event){
-  //   $(this).css({'border-color': 'blue'});
-  // });
+  $('body').on('mouseenter','.dancer', function(event){
+    $(this).css({'border-radius': '10%'});
+  });
 
-  //interaction function
+  $('body').on('mouseleave','.dancer', function(event){
+    $(this).css({'border-radius': '100%'});
+  });
+
+
   $('body').on('click','.dancer', function(event){
 
     var distance = function(dancer1, dancer2){
-      console.log(`dancer1 left = ${dancer1.left}`);
-      console.log(`dancer1 top = ${dancer1.top}`);
-      console.log(`dancer2 left = ${dancer2.left}`);
-      console.log(`dancer2 top = ${dancer2.top}`);
       return Math.sqrt(Math.pow((dancer1.left - dancer2.left), 2) + Math.pow((dancer1.top - dancer2.top), 2));
     }
 
     let dancers = window.dancers;
-    let thisDancer = $(this);
+    let thisDancer = $(this).data('instance');
+
     let sortedDancers = _.sortBy(dancers,function(dancer){
       console.log(distance(thisDancer,dancer));
       return distance(thisDancer,dancer);
-      // return dancer.left;
     });
     let dancersToChange = sortedDancers.slice(0,3);
-    console.log(dancersToChange);
-    // console.log(_.sortBy([2,4,1,2,3],function(num){return num}));
     dancersToChange.forEach(function(dancer){
       dancer.$node.css({'border-color': 'blue'});
     })
