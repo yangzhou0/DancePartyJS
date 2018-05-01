@@ -4,12 +4,12 @@ $(document).ready(function() {
   $('#lineUp').on('click',function(event){
     let height = $("body").height()/2;
 
-    var leftInc = $("body").width()/window.dancers.length;
+    var leftInc = $("body").width()/(window.dancers.length + 2);
 
-    let left = 0;
+    let left = leftInc;
     window.dancers.forEach(function(dancer){
-      left += leftInc;
       dancer.setPosition(height,left);
+      left += leftInc;
 
     });
   });
