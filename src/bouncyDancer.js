@@ -21,17 +21,15 @@ makeBouncyDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  let pos1 = this.pos - 20;
-  let pos2 = this.pos;
+  let pos1 = this.top - 20;
+  let pos2 = this.top;
 
   if(this.flag === 0){
 
     this.$node.animate({'top': `${pos1}px`},this.pause);
-    // this.$node.animate({'top': '10px'},this.pause);
     this.flag++;
   }
   else{
-    // this.$node.animate({'top': '-10px'},this.pause);
     this.$node.animate({'top': `${pos2}px`},this.pause);
     this.flag--;
   }
