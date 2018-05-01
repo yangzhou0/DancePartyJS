@@ -25,7 +25,14 @@ $(document).ready(function() {
 
   $('#interact').on('click',function(event){
 
-  }
+  });
+
+
+  $('body').on('mouseover','.dancer', function(event){
+    $(this).css({'border-color': 'blue'});
+  });
+
+
 
 
 
