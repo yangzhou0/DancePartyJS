@@ -69,12 +69,21 @@ $(document).ready(function() {
       return Math.random() * (max - min) + min;
     }
     for(let i = 0; i < 20; i ++ ){
-      var $dollar = $('<span class="dancer"><img src="assets/GIFs/dollar.gif"></img></span>');
+      var $dollar = $('<span class="dollars"><img src="assets/GIFs/dollar.gif"></img></span>');
       $('body').append($dollar);
       var left = $("body").width() * 0.8 * Math.random();
       $dollar.css({'top':0, 'left': left});
-      $dollar.animate({'top': '100%'}, getRandomArbitrary(1000,8000));
+      var time = getRandomArbitrary(1000,8000);
+      $dollar.animate({'top': '100%'}, time);
     }
+    setTimeout(function(){
+      $('body').find('.dollars').remove();
+    }, 9000);
+    // let dollars = $('body').find('#moneyRain');
+    // console.log(dollars);
+    // dollars.forEach(function(dollar){
+    //   dollar.remove();
+    // })
   })
 
 
