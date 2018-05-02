@@ -19,7 +19,7 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  /*background-color: #555;*/
 }
 .title{
   background-color: #777;

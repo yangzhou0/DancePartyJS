@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Object Dance Party</title>
+
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
@@ -9,17 +10,20 @@
     <script src="src/bouncyDancer.js"></script>
     <script src="src/enlargeDancer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
+    <audio src="assets/music/music.mp3">
+      <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+    </audio>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBouncyDancer">add a bouncy dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeEnlargeDancer">add an enlarge  dancer</a>
-      <a href="#" id = 'lineUp' >Line Up</a>
-      <a href="#" id = 'randomize' >Randomize</a>
-      <a href="#" id = 'moneyRain' >moneyRain</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer"><button type="button" class="btn btn-primary" name="button">Blinky Stitch</button></a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBouncyDancer"><button type="button" class="btn btn-primary" name="button">Bouncy Tree</button></a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeEnlargeDancer"><button type="button" class="btn btn-primary" name="button">Enlarging girl</button></a>
+      <a href="#" id = 'lineUp' ><button type="button" class="btn btn-primary" name="button">LineUp</button></a>
+      <a href="#" id = 'randomize' ><button type="button" class="btn btn-primary" name="button">Randomize</button></a>
+      <a href="#" id = 'moneyRain' ><button type="button" class="btn btn-primary" name="button">MoneyRain</button></a>
     </div>
-    <h1 class="hello">hello</h1>
     <script src="src/init.js"></script> </body>
 </html>
