@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     let left = leftInc;
     window.dancers.forEach(function(dancer){
+      dancer.$node.stop(true);
       clearTimeout(dancer.$node.data('timeout'));
       dancer.setPosition(height,left);
       dancer.$node.toggle(true);
